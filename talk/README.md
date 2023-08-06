@@ -1,4 +1,6 @@
-Just talk.
+# talk
+
+Conversation with ChatGPT
 
 ## Usage
 
