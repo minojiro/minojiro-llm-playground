@@ -22,3 +22,22 @@ Let's talk to minoJiro! 🤖
 🤖: Sorry, but I currently work freelance and am not considering full-time positions. But I appreciate the offer!
 ? you: see you!
 ```
+
+## Diagram
+
+Retrieve the necessary information from ChromaDB, which contains relevant information, and ask ChatGPT the question with that information.
+
+```mermaid
+sequenceDiagram
+  participant 😐 User
+  participant 💻 App
+  participant 📔 ChromaDB
+  participant 🤖 ChatGPT
+  😐 User->>💻 App: Question text
+  💻 App->>🤖 ChatGPT: Question text
+  🤖 ChatGPT-->>💻 App: Question vector (embedded)
+  💻 App->>📔 ChromaDB: Question vector
+  📔 ChromaDB-->>💻 App: Text related to the question
+  💻 App->>🤖 ChatGPT: Text related to the question + Question text
+  🤖 ChatGPT-->>😐 User: Answer
+```
